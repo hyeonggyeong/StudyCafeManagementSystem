@@ -11,7 +11,7 @@ public class MenuManager {
 			System.out.println("================================");
 			System.out.println("Studycafe Management Menu");
 			System.out.println("================================");
-			System.out.println("1. Add Membesr");
+			System.out.println("1. Add Members");
 			System.out.println("2. Delete Members");
 			System.out.println("3. Edit Members");
 			System.out.println("4. View Members");
