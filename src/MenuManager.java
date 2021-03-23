@@ -22,12 +22,14 @@ public class MenuManager {
 			
 			switch(num) {
 			case 1:
-					System.out.print("MemberID :");
+					System.out.print("MemberID(PhoneNumber) :");
 					int MemberID =input.nextInt();
 					System.out.print("Name :");
 					String Membername = input.next();
 					System.out.print("Desired Timeticket[Hour] :");
 					int Timeticket = input.nextInt();
+					System.out.print("Locker Number :");
+					int Locker = input.nextInt();
 					break;
 			case 2:
 				System.out.print("Enter the MemberID you want to delete :");
