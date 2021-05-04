@@ -7,7 +7,6 @@ public class MenuManager {
 		MemberManager membermanager = new MemberManager(input);
 		int num = 0;
 
-		
 		while (num != 5) {
 			System.out.println("================================");
 			System.out.println("Studycafe Management Menu");
