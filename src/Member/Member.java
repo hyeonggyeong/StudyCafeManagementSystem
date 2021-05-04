@@ -1,6 +1,5 @@
 package Member;
 
-
 import java.util.Scanner;
 
 public class Member {
@@ -66,6 +65,7 @@ public class Member {
 		System.out.print(" / Timeticket : " + time);
 		System.out.println(" / Locker Number: " + locker);
 	}
+	
 	public void getUserInput(Scanner input) {
 		System.out.print("Member ID(PhoneNumber without '-') :");
 		int id =input.nextInt();
