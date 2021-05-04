@@ -13,7 +13,8 @@ public class Member {
 	public Member() {	
 	}
 	
-	public Member(int id, String name, int time, int locker) {
+	public Member(MemberKind kind, int id, String name, int time, int locker) {
+		this.kind = kind;
 		this.id = id;
 		this.name = name;
 		this.time = time;
@@ -59,7 +60,7 @@ public class Member {
 		this.locker = locker;
 	}
 	
-	public void printInfo() {
+	public void printInfo() {	
 		System.out.print("ID : " + id);
 		System.out.print(" / Name : " + name);
 		System.out.print(" / Timeticket : " + time);
