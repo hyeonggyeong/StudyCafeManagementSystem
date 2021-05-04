@@ -38,6 +38,7 @@ public class MemberManager {
 			}
 		}		
 	}
+	
 	public void deletemembers() {
 		System.out.println("***************DELETE******************");
 		System.out.print("Enter the MemberID you want to delete :");
