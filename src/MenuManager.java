@@ -33,7 +33,9 @@ public class MenuManager {
 				membermanager.viewmembers();
 				break;			
 			}
+			
 		}
+		
 	}
 	
 }
