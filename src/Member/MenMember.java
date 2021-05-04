@@ -21,6 +21,7 @@ public class MenMember extends Member {
 		while (answer != 'y' && answer != 'Y' && answer != 'n' && answer != 'N') {
 			System.out.print("Do you want to use locker? (Y/N)");
 			answer = input.next().charAt(0);
+			
 			if (answer == 'y'|| answer =='Y') {
 				System.out.print("Locker Number(Men : 1~100) :");
 				int locker = input.nextInt();
