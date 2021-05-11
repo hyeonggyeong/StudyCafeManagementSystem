@@ -2,7 +2,14 @@ package Member;
 
 import java.util.Scanner;
 
-public class MenMember extends Member {
+public class MenMember extends Member implements MemberInput {
+	
+	public void printInfo() {	
+		System.out.print("ID : " + id);
+		System.out.print(" / Name : " + name);
+		System.out.print(" / Timeticket : " + time);
+		System.out.println(" / Locker Number: " + locker);
+	}
 	
 	public void getUserInput(Scanner input) {
 		System.out.print("Member ID(PhoneNumber without '-') :");
