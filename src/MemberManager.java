@@ -2,11 +2,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import Member.Member;
+import Member.MemberInput;
 import Member.MenMember;
 import Member.WomenMember;
 
 public class MemberManager {
-	ArrayList<Member> members= new ArrayList<Member>();
+	ArrayList<MemberInput> members= new ArrayList<MemberInput>();
 	Scanner input;	
 	MemberManager(Scanner input) {
 		this.input = input;
@@ -14,7 +15,7 @@ public class MemberManager {
 	
 	public void addmembers() {
 		int kind = 0;
-		Member member;
+		MemberInput memberInput;
 		while (kind != 1 && kind !=2) {
 			System.out.println("****************ADD******************");
 			System.out.println("Select Gender: ");
@@ -22,15 +23,15 @@ public class MemberManager {
 			System.out.println("2. Women");
 			kind = input.nextInt();
 			if (kind == 1) {
-				member = new MenMember();
-				member.getUserInput(input);
-				members.add(member);
+				memberInput = new MenMember();
+				memberInput.getUserInput(input);
+				members.add(memberInput);
 				break;
 			}
 			else if (kind ==2) {
-				member = new WomenMember();
-				member.getUserInput(input);
-				members.add(member);
+				memberInput = new WomenMember();
+				memberInput.getUserInput(input);
+				members.add(memberInput);
 				break;
 			}
 			else {
@@ -70,8 +71,8 @@ public class MemberManager {
 		System.out.print("Enter the MembertID you want to edit :");
 		int memberID =input.nextInt();
 		for (int i = 0; i<members.size(); i++) {
-			Member member = members.get(i);
-			if(member.getId() == memberID) {
+			MemberInput memberInput = members.get(i);
+			if(memberInput.getId() == memberID) {
 				int editnum = -1;				
 				while (editnum != 5) {
 					System.out.println("Enter the number you want to edit");
@@ -84,22 +85,22 @@ public class MemberManager {
 					if (editnum == 1) {
 						System.out.print("Member ID(PhoneNumber without '-') :");
 						int id =input.nextInt();
-						member.setId(id);
+						memberInput.setId(id);
 					}
 					else if (editnum == 2) {
 						System.out.print("Member Name :");
 						String name = input.next();
-						member.setName(name);
+						memberInput.setName(name);
 					}
 					else if (editnum == 3) {
 						System.out.print("Desired Timeticket[Hour] :");
 						int time = input.nextInt();
-						member.setTime(time);
+						memberInput.setTime(time);
 					}
 					else if (editnum == 4) {
 						System.out.print("Locker Number :");
 						int locker = input.nextInt();
-						member.setLocker(locker);
+						memberInput.setLocker(locker);
 					}
 					else {
 						continue;	
