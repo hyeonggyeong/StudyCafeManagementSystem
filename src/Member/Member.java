@@ -2,7 +2,7 @@ package Member;
 
 import java.util.Scanner;
 
-public class Member {
+public abstract class Member {
 	protected MemberKind kind;
 	protected int id;
 	protected String name;
@@ -59,12 +59,8 @@ public class Member {
 		this.locker = locker;
 	}
 	
-	public void printInfo() {	
-		System.out.print("ID : " + id);
-		System.out.print(" / Name : " + name);
-		System.out.print(" / Timeticket : " + time);
-		System.out.println(" / Locker Number: " + locker);
-	}
+	public abstract void printInfo();	
+		
 	
 	public void getUserInput(Scanner input) {
 		System.out.print("Member ID(PhoneNumber without '-') :");
