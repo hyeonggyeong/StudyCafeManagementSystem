@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 import Member.Member;
 import Member.MemberInput;
@@ -17,25 +18,33 @@ public class MemberManager {
 		int kind = 0;
 		MemberInput memberInput;
 		while (kind != 1 && kind !=2) {
-			System.out.println("****************ADD******************");
-			System.out.println("Select Gender: ");
-			System.out.println("1. Men");
-			System.out.println("2. Women");
-			kind = input.nextInt();
-			if (kind == 1) {
-				memberInput = new MenMember();
-				memberInput.getUserInput(input);
-				members.add(memberInput);
-				break;
+			try {
+				System.out.println("****************ADD******************");
+				System.out.println("Select Gender: ");
+				System.out.println("1. Men");
+				System.out.println("2. Women");
+				kind = input.nextInt();
+				if (kind == 1) {
+					memberInput = new MenMember();
+					memberInput.getUserInput(input);
+					members.add(memberInput);
+					break;
+				}
+				else if (kind ==2) {
+					memberInput = new WomenMember();
+					memberInput.getUserInput(input);
+					members.add(memberInput);
+					break;
+				}
+				else {
+					System.out.println("Select num for Member's Genger between 1 and 2");
+				}	
 			}
-			else if (kind ==2) {
-				memberInput = new WomenMember();
-				memberInput.getUserInput(input);
-				members.add(memberInput);
-				break;
-			}
-			else {
-				System.out.println("Select num for Member's Genger between 1 and 2");
+			catch(InputMismatchException e) {
+				System.out.println("please put an integer between 1 and 2!");
+				if (input.hasNext()) {
+					input.next();
+				}
 			}
 		}		
 	}
