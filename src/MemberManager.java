@@ -1,15 +1,20 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
-import Member.Member;
 import Member.MemberInput;
 import Member.MenMember;
 import Member.WomenMember;
 
-public class MemberManager {
+public class MemberManager implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6384567515766354655L;
+	
 	ArrayList<MemberInput> members= new ArrayList<MemberInput>();
-	Scanner input;	
+	transient Scanner input;	
 	MemberManager(Scanner input) {
 		this.input = input;
 	}

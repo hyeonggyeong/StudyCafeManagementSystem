@@ -1,8 +1,13 @@
 package Member;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public abstract class Member {
+public abstract class Member implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9043872294283440226L;
 	protected MemberKind kind;
 	protected int id;
 	protected String name;
