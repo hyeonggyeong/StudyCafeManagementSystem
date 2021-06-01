@@ -1,8 +1,10 @@
+package manager;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
+import Member.Member;
 import Member.MemberInput;
 import Member.MenMember;
 import Member.WomenMember;
@@ -129,5 +131,12 @@ public class MemberManager implements Serializable {
 		for (int i = 0; i<members.size(); i++) {
 			members.get(i).printInfo();
 		}
+	}
+	
+	public int size() {
+		return members.size();
+	}
+	public MemberInput get(int index) {
+		return (MemberInput) members.get(index);
 	}
 }

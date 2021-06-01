@@ -1,4 +1,7 @@
+package manager;
 import java.util.Scanner;
+
+import GUI.WindowFrame;
 import log.EventLogger;
 
 import java.io.FileInputStream;
@@ -20,6 +23,7 @@ public class MenuManager {
 			membermanager = new MemberManager(input);
 		}
 		
+		WindowFrame frame = new WindowFrame(membermanager);
 		selectMenu(input,membermanager);
 		putObject(membermanager, "membermanager.ser");
 	}
