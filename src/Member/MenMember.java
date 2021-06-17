@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MenMember extends Member implements MemberInput {
 	
+
 	public void printInfo() {	
 		System.out.print("ID : " + id);
 		System.out.print(" / Name : " + name);

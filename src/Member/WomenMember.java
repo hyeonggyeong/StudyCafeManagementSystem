@@ -2,7 +2,7 @@ package Member;
 
 import java.util.Scanner;
 
-public class WomenMember extends Member implements MemberInput {
+public class WomenMember extends MenMember implements MemberInput {
 	
 	public void printInfo() {	
 		System.out.print("ID : " + id);

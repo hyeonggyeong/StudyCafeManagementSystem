@@ -17,11 +17,13 @@ public class MemberViewer extends JPanel {
 	
 	MemberManager membermanager;
 	
-	public MemberViewer(WindowFrame frame, MemberManager membermanager) {
-		this.frame = frame;
+	public MemberManager getMembermanager() {
+		return membermanager;
+	}
+
+	public void setMembermanager(MemberManager membermanager) {
 		this.membermanager = membermanager;
-		
-		System.out.println("***" + membermanager.size() + "***");
+		this.removeAll();
 		
 		DefaultTableModel model = new DefaultTableModel();
 		model.addColumn("ID");
@@ -44,6 +46,15 @@ public class MemberViewer extends JPanel {
 		JScrollPane sp = new JScrollPane(table);
 		
 		this.add(sp);
+	}
+
+	public MemberViewer(WindowFrame frame, MemberManager membermanager) {
+		this.frame = frame;
+		this.membermanager = membermanager;
+		
+		System.out.println("***" + membermanager.size() + "***");
+		
+		
 		
 	}
 
